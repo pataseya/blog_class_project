@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
+  <hr>
+  <h3>Comment on this post .....</h3>
   <div class="field">
     <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, placeholder: "Written by ..."  %>
   </div>
-
   <div class="field">
     <%= form.label :comment_entry %>
-    <%= form.text_area :comment_entry %>
+    <%= form.text_area :comment_entry , placeholder: "Tell me something ..." %>
   </div>
 
   <div class="field">
@@ -26,6 +27,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit  "Save", class: "btn btn-primary" %>
   </div>
 <% end %>
