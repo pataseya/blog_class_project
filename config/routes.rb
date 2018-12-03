@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :comments
   resources :posts
+
+  root 'posts#index'
   get 'index' => 'practice/index'
   get 'about' =>'practice#about'
   post 'index' => 'practice#index'
 
 
-# here are the routes you get when you generate a model or
-# scaffold for a resource
+# here are the routes you get when you generate a
+# scaffold for a resource - behind the scenes
 
   #get "/posts" => "posts#index", as: :posts
   #

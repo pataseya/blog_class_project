@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
 
   # POST /comments
   # POST /comments.json
-  def create
+def create
     @comment = Comment.new(comment_params)
 
     respond_to do |format|
@@ -36,6 +36,7 @@ class CommentsController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
@@ -69,6 +70,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:author, :comment_entry, :post_id)
+      params.require(:comment).permit(:author, :comment_entry, :post_id, :user_id)
     end
 end

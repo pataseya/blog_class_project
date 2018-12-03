@@ -7,7 +7,7 @@
   <% @posts.each do |post| %>
   <div class="col-md-12">
     <div class="panel panel-primary">
-      <div class="panel-heading"><%= post.title %> &nbsp <em> by  &nbsp <%= post.author %></em>
+      <div class="panel-heading"><%= post.title %> &nbsp <em> by  &nbsp <%= post.user.email %></em>
       </div>
       <div class="panel-body">
         <p><%= post.blog_entry %></p>
